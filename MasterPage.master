@@ -1,0 +1,109 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	  <link href="css/style.css" rel="stylesheet" type="text/css"  media="all" />
+	  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+      <link href="css/slider.css" rel="stylesheet" type="text/css"  media="all" />
+  <script type="text/javascript" src="js/jquery.min.js"></script> 
+  <script type="text/javascript" src="js/jquery.easing.1.3.js"></script> 
+  <script type="text/javascript" src="js/camera.min.js"></script>
+  <script type="text/javascript" src="js/jquery.lightbox.js"></script>
+     <script type="text/javascript" src="js/simply-toast.min.js"></script>
+     <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+        <link rel="stylesheet" type="text/css" href="css/simply-toast.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+  <link rel="stylesheet" type="text/css" href="css/lightbox.css" media="screen" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="my_form" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" EnablePageMethods="true" EnablePartialRendering="true" runat="server" /> 
+    <div>
+        <!----start-header----->
+	 <div class="header">
+	     <div class="wrap">
+			<div class="top-header">
+				<div class="logo">
+					<a href="index.aspx"><img src="images/logo.png" title="logo" /></a>
+				</div>
+				<div class="user">
+					<p>Hello,<a href="login.aspx">Guest.</a></p>
+				</div>
+				<div class="clear"> </div>
+			</div>
+			<!---start-top-nav---->
+			<div class="top-nav">
+				<div class="top-nav-left">
+					<ul>
+						<li runat="server" id="page1"><a href="index.aspx">Home</a></li>
+						<li runat="server" id="page2"><a href="about.aspx">About</a></li>
+						<li runat="server" id="page3"><a href="services.aspx">Services</a></li>
+						<li runat="server" id="page4"><a href="menu.aspx">Menu</a></li>
+						<li runat="server" id="page5"><a href="contact.aspx">Contact</a></li>
+                        <li runat="server" id="page6"><a href="feedback.aspx">Feedback</a></li>
+                        <li runat="server" id="page7"><a href="cart.aspx">Cart</a></li>
+						<div class="clear"> </div>
+					</ul>
+				</div>
+				<div class="top-nav-left" style="float:right;">
+						<ul><li runat="server" id="page8"><a href="login.aspx">Login</a></li></ul>
+				</div>
+				<div class="clear"> </div>
+			</div>
+			<!---End-top-nav---->
+		</div>
+	</div>
+   <!----End-header----->
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        <!---start-footer---->
+		 <div class="footer">
+		<div class="wrap">
+			<div class="footer-grid">
+				<h3>About us</h3>
+				<p>Nestled in the heart of New Delhi's Connaught Place, MultiCusine, New Delhi, is one of the city's finest and most eminent five-star hotels. Ride royally in a Rolls-Royce Phantom, enjoy the hotel's sprawling lawns and timeless architecture inspired by the work of Edward Lutyen and take a step into paradise!</p>
+				<a href="about.aspx">ReadMore</a>
+			</div>
+			<div class="footer-grid center-grid">
+				<h3>Recent posts</h3>
+				<ul>
+					<li><a href="#"><i class="fa fa-facebook fa-lg"></i></a></li>
+					<li><a href="#"><i class="fa fa-twitter fa-lg"></i></a></li>
+					<li><a href="#"><i class="fa fa-tripadvisor fa-lg"></i></a></li>
+					<li><a href="#"><i class="fa fa-linkedin fa-lg"></i></a></li>
+					<li><a href="#"><i class="fa fa-pinterest-p fa-lg"></i></a></li>
+				</ul>
+			</div>
+			<div class="footer-grid twitts">
+				<h3>OUR FANS</h3>
+				<p id="tm1" runat="server"></p>
+				<p id="tm2" runat="server"></p>
+			</div>
+			<div class="footer-grid">
+				<h3>DID YOU KNOW?</h3>
+				<p runat="server" id="rfact"></p>
+			</div>
+			<div class="clear"> </div>
+		</div>
+		<div class="clear"> </div>
+	</div>
+	<div class="copy-right">
+		<div class="top-to-page">
+						<a href="#top" class="scroll"> </a>
+						<div class="clear"> </div>
+					</div>
+		<p>Design by Himanshu Bansal</p>
+	</div>
+		 <!---End-footer---->
+    </div>
+        </form>
+</body>
+</html>
